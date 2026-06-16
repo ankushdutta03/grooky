@@ -12,6 +12,11 @@ workflows:
         script: |
           npm install
 
+      - name: Make Gradle executable
+        script: |
+          cd android
+          chmod +x gradlew
+
       - name: Build Android app
         script: |
           cd android
